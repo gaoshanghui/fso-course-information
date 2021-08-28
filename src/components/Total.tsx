@@ -1,3 +1,4 @@
+import React from 'react';
 interface CoursePart {
   name: string;
   exerciseCount: number;
@@ -10,13 +11,13 @@ interface TotalProps {
 const Total = (props: TotalProps) => {
   return (
     <div>
-      <p>
+      <h3>
         <span>Number of exercises </span>
         {props.courseParts.reduce(
           (carry, part) => carry + part.exerciseCount,
           0
         )}
-      </p>
+      </h3>
     </div>
   );
 };
